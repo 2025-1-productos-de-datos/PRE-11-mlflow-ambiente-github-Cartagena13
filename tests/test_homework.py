@@ -7,13 +7,16 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def test_01():
+def test_01(): 
 
     # Test if the homework script runs without errors
     try:
-        subprocess.run([
+        subprocess.run(
+        [
             "bash", "run.sh"
-        ], check=True)
+        ], 
+        check=True
+    )
     except subprocess.CalledProcessError as e:
         raise Exception(f"Error running the homework script: {e}")
 
